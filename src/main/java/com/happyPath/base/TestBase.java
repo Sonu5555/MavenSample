@@ -17,7 +17,7 @@ public class TestBase {
 	
 	public TestBase()  {
 		try {
-			FileInputStream ip = new FileInputStream("D:\\Selenium\\HappyPath\\src\\main\\java\\com\\happyPath\\config\\config.properties");   
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\happyPath\\config\\config.properties");   
 			
 			prop = new Properties();
 			
