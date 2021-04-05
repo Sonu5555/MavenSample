@@ -5,7 +5,10 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>HappyPath Testing</name>
   <description>This is a sample test case for initial Azure Devops Test</description>
-  
+  <properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+</properties>
   
  <build>
 <plugins>
