@@ -1,6 +1,5 @@
 package com.happyPath.base;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
@@ -10,9 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.WebDriverManagerException;
+
 public class TestBase {
 
 	public static WebDriver driver;
+	
 //	public static Properties prop;
 //	
 //	
@@ -37,7 +40,8 @@ public static void initilization() {
 	String browserName = "Chrome";
 	if(browserName.equals("Chrome"))
 {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\\\chrome\\\\chromedriver.exe");		
+		WebDriverManager.chromedriver().setup();
+//		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\\\chrome\\\\chromedriver.exe");		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless"); 
 		driver = new ChromeDriver(options);
