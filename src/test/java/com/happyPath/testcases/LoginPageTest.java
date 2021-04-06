@@ -23,12 +23,16 @@ public class LoginPageTest extends TestBase{
 		 mgr = new PropertyManager();
 	}
 	
-	@Test
+	@Test(priority = 0)
 	public void LoginSuccessTest() {
 		loginPage.login(mgr.username(),mgr.passwrd());
 		 System.out.println("@Test "+mgr.username());
 	}
-
+	@Test(priority = 1)
+	public void testMesssage() {
+		loginPage.login(mgr.username(),mgr.passwrd());
+		 System.out.println("@Test "+mgr.username());
+	}
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
