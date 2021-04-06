@@ -27,6 +27,7 @@ public class LoginPageTest extends TestBase{
 	public void LoginSuccessTest() {
 		loginPage.login(mgr.username(),mgr.passwrd());
 		 System.out.println("@Test "+mgr.username());
+		
 	}
 	@Test(priority = 1)
 	public void testMesssage() {

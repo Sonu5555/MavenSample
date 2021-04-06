@@ -1,1 +1,3 @@
+com\happyPath\pages\LoginPage.class
+com\happyPath\base\TestBase.class
 com\happyPath\config\PropertyManager.class
