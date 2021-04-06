@@ -29,7 +29,7 @@ public class LoginPageTest extends TestBase{
 		loginPage.login(mgr.username(),mgr.passwrd());
 		 System.out.println("@Test "+mgr.username());
 		 SoftAssert softassert = new SoftAssert();
-		 softassert.assertEquals(mgr.username(), "sonu@socxo.com");
+		 softassert.assertEquals(mgr.username(), "sonu@socxeeo.com");
 		 softassert.assertAll();
 	}
 
